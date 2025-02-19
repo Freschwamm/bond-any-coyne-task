@@ -14,23 +14,21 @@ This take-home task is designed to assess your skills in React, Next.js, and CSS
 
 ## Prerequisites
 
-- [Bun](https://bun.sh) installed on your system
 - Node.js 18.17 or later
 
 ## Getting Started
 
-1. Fork this repository to your GitHub account
-2. Clone your forked repository locally
-3. Install dependencies:
+1. Clone this repository to your local machine
+2. Install dependencies:
 
 ```bash
-bun install
+npm install
 ```
 
-4. Run the development server:
+3. Run the development server:
 
 ```bash
-bun dev
+npm run dev
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result
@@ -49,37 +47,34 @@ bun dev
 
 ```bash
 # Install dependencies
-bun install
+npm install
 
 # Run development server
-bun dev
+npm run dev
 
 # Run type checking
-bun type-check
+npm run type-check
 
 # Run linting
-bun lint
+npm run lint
 
 # Run tests (if implemented)
-bun test
+npm run test
 ```
 
 ## Submission
 
-1. Complete the task in your forked repository
-2. Ensure all code is committed and pushed
+1. Complete the task in your cloned repository
+2. Create a repository on your GitHub account and push your changes to it
 3. Send us the link to your GitHub repository
-4. Include any additional instructions or notes in this README if necessary
 
-## Evaluation Criteria
+## Evaluation Criteria (On Work Completed)
 
 - Code organisation and cleanliness
 - Component design and reusability
 - TypeScript usage
 - UI/UX implementation
-- Error handling
-- Git commit history
-- Documentation
+- Code documentation
 
 ## Time Expectation
 
