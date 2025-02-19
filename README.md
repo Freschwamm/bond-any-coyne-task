@@ -15,6 +15,7 @@ This take-home task is designed to assess your skills in React, Next.js, and CSS
 ## Prerequisites
 
 - Node.js 18.17 or later
+- Figma file: This will be provided to you via email
 
 ## Getting Started
 
@@ -78,7 +79,8 @@ npm run test
 
 ## Time Expectation
 
-We expect this task to take 1-2 hours. Focus on demonstrating clean code and good architecture rather than perfect styling or additional features.
+We expect this task to take 1-2 hours. Focus on demonstrating clean code and good architecture rather than additional features. Please do 
+not spend more than 2 hours on this task, we are more interested in your approach and code quality than the amount of time you spend.
 
 ## Questions?
 
