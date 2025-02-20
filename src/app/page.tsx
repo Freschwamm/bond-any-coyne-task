@@ -3,11 +3,15 @@
 import { useEffect, useState } from 'react';
 import { Character } from './types';
 import { CharacterCard } from './components/CharacterCard';
+import Modal from './components/Modal';
+import { CharacterModalCard } from './components/CharacterModalCard';
 
 export default function Home() {
   const [characters, setCharacters] = useState<Character[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isCharacterModalOpen, setCharacterModalOpen] = useState<boolean>(false);
+  const [currentCharacter, setCurrentCharacter] = useState<Character | undefined>()
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -56,12 +60,23 @@ export default function Home() {
             key={character.id}
             character={character}
             onMoreInfo={() => {
+              setCharacterModalOpen(true)
+              setCurrentCharacter(character)
               // Open Modal
               console.log('More info clicked for:', character.name);
             }}
           />
         ))}
       </div>
+      <Modal
+        isOpen={isCharacterModalOpen}
+        onClose={() => setCharacterModalOpen(false)}
+      > 
+        <CharacterModalCard
+          character={currentCharacter}
+          // onMoreInfo={()=>{}}
+          />
+      </Modal>
     </div>
   );
 }
