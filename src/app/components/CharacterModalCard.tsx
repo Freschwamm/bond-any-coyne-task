@@ -28,6 +28,7 @@ export const CharacterModalCard = ({
         fetchEpisodes()
     },[character]);
         if(!character) return null
+        const characterName = character.name.split(' ')[0]
   return (
     <div className="flex flex-col md:flex-row gap-4 bg-white rounded-2xl shadow-md overflow-hidden">
       <div className="relative w-full  flex-1">
@@ -41,16 +42,16 @@ export const CharacterModalCard = ({
       </div>
       <div className="p-4 flex-1 text-black">
         <h2 className="text-xl font-bold mb-2 border-b border-gray-00">{character.name}</h2>
-        <p className="mb-2">About: {character.name}</p>
+        <p className="mb-2 inline-flex items-center space-x-2"><img src="/exclamationCircle.svg" alt="Logo" className="w-5 h-5 mr-2" />About: {characterName}</p>
         <p className="text-gray-400">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        <h3 className="text-s font-bold mb-2 mt-2">Episodes:</h3>
+        <h3 className="text-s font-bold mb-2 mt-2 inline-flex items-center space-x-2"><img src="/squareStack.svg" alt="Logo" className="w-5 h-5 mr-2" />Episodes:</h3>
         <ul>{episodes.map((episode) => (
               <li className="text-gray-400" key={episode.id}>Episode {episode.id} - {episode.name}</li>
             ))}</ul>
         <button
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400 transition-colors text-xs mt-2"
         >
-          Find out more info about {character.name}
+          Find out more info about {characterName}
         </button>
       </div>
     </div>
